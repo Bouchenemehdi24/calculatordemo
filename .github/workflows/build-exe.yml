@@ -1,0 +1,31 @@
+name: Build Executable
+
+on:
+  push:
+    branches: [ "main" ] # Trigger this workflow on pushes to the main branch
+  pull_request:
+    branches: [ "main" ] # Trigger this workflow on pull requests to the main branch
+
+jobs:
+  build:
+    runs-on: windows-latest # Use the latest Windows Server version to build
+
+    steps:
+    - uses: actions/checkout@v3 # Checks out your repository code
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x' # Use Python 3.x
+
+    - name: Install PyInstaller
+      run: pip install pyinstaller
+
+    - name: Package with PyInstaller
+      run: pyinstaller --onefile calculator.py
+
+    - name: Upload Executable Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: calculator-exe # Name of the artifact
+        path: ./dist/calculator.exe # Path to the .exe file created by PyInstaller

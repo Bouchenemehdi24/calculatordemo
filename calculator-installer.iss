@@ -4,7 +4,7 @@
 ;
 
 [Setup]
-; ; App Settings
+; App Settings
 AppName=Simple Calculator
 AppVerName=Simple Calculator 1.0
 AppVersion=1.0
@@ -16,7 +16,6 @@ DefaultDirName={pf}\Simple Calculator
 DefaultGroupName=Simple Calculator
 OutputDir=.\InstallerOutput  ; Output folder for the installer
 OutputBaseFilename=SimpleCalculatorInstaller
-SetupIconFile=calculator.ico  ; Optional: Icon for the installer and application
 UninstallDisplayIcon={app}\calculator.exe
 Compression=lzma
 SolidCompression=yes

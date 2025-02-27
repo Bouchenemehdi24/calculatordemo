@@ -25,7 +25,7 @@ jobs:
       run: pyinstaller --onefile calculator.py
 
     - name: Upload Executable Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4  # Updated to v4
       with:
         name: calculator-exe # Name of the artifact
         path: ./dist/calculator.exe # Path to the .exe file created by PyInstaller

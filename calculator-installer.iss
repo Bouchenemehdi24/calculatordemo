@@ -25,7 +25,7 @@ WizardStyle=modern
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Tasks]
-Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:GroupIcons}"; Flags: unchecked
+Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; Flags: unchecked  ; Removed GroupDescription
 
 [Files]
 Source: "dist\calculator.exe"; DestDir: "{app}"; Flags: ignoreversion
